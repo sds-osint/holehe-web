@@ -1,0 +1,21 @@
+# Ignore Python virtual environments
+venv/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Editor and OS stuff
+.DS_Store
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Build artifacts
+*.log
+*.sqlite3
+*.db

@@ -1,0 +1,121 @@
+/* Extracted from inline CSS in index.html */
+body {
+    font-family: sans-serif;
+    padding: 2rem;
+    background-color: #343541;
+    color: #d1d5db;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #40414f;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1.5rem;
+  }
+  .input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  input[type="email"] {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #2d2f3b;
+    color: #f3f4f6;
+  }
+  button {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    background-color: #10a37f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0e8f70;
+  }
+  .result-box {
+    background: #2d2f3b;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid #10a37f;
+    margin-top: 1rem;
+  }
+  .result-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    background: #3e414d;
+    border-radius: 5px;
+    user-select: none;
+  }
+  .result-title::before {
+    content: '\25B6';
+    margin-right: 0.5rem;
+    transition: transform 0.2s;
+  }
+  .expanded .result-title::before {
+    transform: rotate(90deg);
+  }
+  .toggle-button {
+    background-color: #007BFF;
+    margin-top: 1rem;
+  }
+  .toggle-button:hover {
+    background-color: #0069d9;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #555;
+    margin-top: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+  }
+  .progress-bar-inner {
+    height: 100%;
+    width: 0;
+    background-color: #10a37f;
+    animation: progressAnim 2s infinite;
+  }
+  @keyframes progressAnim {
+    0% { width: 0; }
+    50% { width: 80%; }
+    100% { width: 0; }
+  }
+  .error-box {
+    background-color: #8b0000;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid #ff4c4c;
+  }
+  .collapsible {
+    display: none;
+    margin-top: 0.5rem;
+  }
+  .stats {
+    margin-top: 1rem;
+    font-style: italic;
+  }
+  .clipboard-button {
+    margin-top: 0.5rem;
+    background-color: #444;
+  }
+  .clipboard-button:hover {
+    background-color: #333;
+  }

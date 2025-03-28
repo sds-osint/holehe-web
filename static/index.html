@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holehe Email Address Check</title>
+    <link rel="stylesheet" href="/static/style.css">
+    </head>
+<body>
+  <div class="container">
+    <h1>Holehe Email Address Check</h1>
+    <p>Enter in an email address to check if it has been registered on any platforms.</p>
+    <div class="input-group">
+      <input id="email" type="email" placeholder="Enter email" />
+      <button onclick="checkEmail()" id="checkBtn">Check</button>
+    </div>
+
+    <div class="progress-bar" id="progress">
+      <div class="progress-bar-inner"></div>
+    </div>
+
+    <div id="error" class="error-box" style="display:none;"></div>
+
+    <div id="results">
+      <div class="result-box" id="box-used">
+        <div class="result-title" onclick="toggleSection('section-used', this)">USED</div>
+        <div class="collapsible" id="section-used" style="display: block;"></div>
+      </div>
+      <div class="result-box" id="box-not-used">
+        <div class="result-title" onclick="toggleSection('section-not-used', this)">NOT USED</div>
+        <div class="collapsible" id="section-not-used"></div>
+      </div>
+      <div class="result-box" id="box-rate-limited">
+        <div class="result-title" onclick="toggleSection('section-rate-limited', this)">RATE LIMITED</div>
+        <div class="collapsible" id="section-rate-limited"></div>
+      </div>
+      <div class="result-box" id="box-error">
+        <div class="result-title" onclick="toggleSection('section-error', this)">ERROR</div>
+        <div class="collapsible" id="section-error"></div>
+      </div>
+    </div>
+
+    <div id="raw" class="result-box" style="display:none;"></div>
+    <button class="clipboard-button" onclick="copyRawOutput()">Copy Raw Output</button>
+    <button id="toggle" class="toggle-button" onclick="toggleRaw()">Show Raw Output</button>
+    <button class="toggle-button" onclick="exportToCSV()">Export to CSV</button>
+    <div id="timing" class="stats"></div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

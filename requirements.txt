@@ -1,0 +1,4 @@
+holehe
+fastapi
+uvicorn
+pydantic[email] 
