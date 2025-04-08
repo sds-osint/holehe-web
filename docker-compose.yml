@@ -1,6 +1,14 @@
+# Add a network for reverse proxy
+networks:
+  custom_network:
+    external: true
+
 services:
   holehe:
     build: .
-    ports:
-      - "8000:8000"
+    container_name: holehe-web
+    expose:
+      - "8000"
     restart: unless-stopped
+    networks:
+      - custom_network
